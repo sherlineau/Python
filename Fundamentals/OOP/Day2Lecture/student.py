@@ -71,11 +71,12 @@ martha = Student( "Martha", "Smith", "Amanda", "Web Fundamentals", 9.1)
 roger = Student( "Roger", "Smith", "Tyler", "Java", 7.9)
 anna = Student( "Anna", "Smith", "Nicole", "Web Fundamentals", 8.5)
 
-Student.print_all_students()
-Student.change_stack_name("MERN")
-Student.print_all_students()
+print(Student.list_students)
+# Student.print_all_students()
+# Student.change_stack_name("MERN")
+# Student.print_all_students()
 
-alexander.print_student_info()
+# alexander.print_student_info()
 
 # alexander = Student( "Alexander" , "Miller" , "Alfredo", "Python/Flask")
 # #alexander.print_student_info()
