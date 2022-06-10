@@ -17,7 +17,7 @@ def say( str ):
 
 @app.route ("/repeat/<int:num>/<str>")
 def repeat(num, str):
-    return num * str
+    return num * f"<h1>{str}</h1>"
 
 @app.errorhandler(404)
 def page_not_found(e):
