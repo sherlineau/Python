@@ -6,6 +6,7 @@ class Pet:
         self.tricks = tricks
         self.health = health
         self.energy = energy
+        self.type = type
 
     def sleep(self):
         self.energy += 25
@@ -20,6 +21,7 @@ class Pet:
         self.health += 5
         print(f"Played with {self.name} -- {self.name} gained 5 energy")
 
+
 class Cat(Pet):
 
     def __init__(self, name, type, tricks, health, energy):
@@ -29,7 +31,7 @@ class Cat(Pet):
     def noise(self):
         print("meowww")
 
-            
+
 class Dog(Pet):
 
     def __init__(self, name, type, tricks, health, energy):
@@ -38,5 +40,3 @@ class Dog(Pet):
 
     def noise(self):
         print("woooofffff")
-
-            

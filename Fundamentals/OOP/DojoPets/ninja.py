@@ -12,8 +12,8 @@ class Ninja:
         else: 
             self.pet = Pet(petname, type, tricks, health = 10, energy = 0)
 
-    def print(self):
-            print(type(self.pet.health))
+    # def print(self):
+    #         print(type(self.pet.health))
 
     def walk(self): #play
         self.pet.play()
@@ -31,12 +31,20 @@ class Ninja:
         print(f"{self.first_name}'s pet is at {self.pet.type} and their name is {self.pet.name}.")
 
 
-
 sherline = Ninja("Sherline", "Au", "Lily", "cat", "knocking stuff over for food")
 sherline.print_pet_info()
 sherline.walk().feed("treats").bathe()
+print("___________________")
+
 
 linda = Ninja("Linda", "Nguyen", "Wong Choi", "Dog", "rolling over")
+
 linda.walk().feed("steak").bathe()
+print("___________________")
 
 sherline.pet.sleep()
+
+lisa = Ninja("Linda", "Nguyen", "Wong Choi", "lizard", "rolling over")
+lisa.print_pet_info()
+lisa.walk().feed("worms")
+print("___________________")
