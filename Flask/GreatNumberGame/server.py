@@ -6,7 +6,7 @@ app.secret_key = b'"\x1fF@\x93&\xad\x83*\xdb\x92\xe9\r\x1e\xe2\xa2'
 @app.route("/")
 @app.route("/home")
 def home():
-    # number = random.randint(1,100)
+    session['number'] = random.randint(1,10)
     return render_template("index.html")
 
 @app.route("/guess", methods=["POST"])
@@ -16,12 +16,16 @@ def got_guess():
     
 @app.route("/answer")
 def show_answer():
-    number = random.randint(1,10)
-    if int(session['guess']) == number:
+    # number = session['number']
+    if int(session['guess']) == session['number']:
         guess = True
     else:
         guess = False
     return render_template("answer.html", guess = guess )
+
+@app.route('/playagain', methods=['POST'])
+def play_again():
+    return redirect("/")
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -15,28 +15,31 @@
         <div class="container p-5 my-5 bg-white text-black text-center w-100">
             <p class="display-6">I am thinking of a number between 1 and 10</p>   
         </div>
-        <div class="container my-5 text-white text-center">
+        
             {% if guess == True %}
                 <div class="container p-5 my-5 bg-success text-white text-center w-75">
-                    <h1>Correct</h1>    
+                    <h1>Correct</h1>  
+                    <form method="post" action="/playagain">
+                        <input type="submit" method='post' action="/playagain" value="Play Again" class="btn btn-primary">
+                    </form>
                 </div>
             {% else %}
                 <div class="container p-5 my-5 bg-danger text-white text-center w-75">
                     <h1>Wrong!</h1>    
                 </div>
-
-            {% endif %}
-        </div>
-
-        <div class="justify-content-center w-25 p-3 text-center mx-auto display-6">
-            <form method="post" action="/guess">
-                <div class="mb-3 mt-3">
-                    <label for="guess" class="form-label">Guess a number:</label>
-                    <input type="text" class="form-control form-control-lg" placeholder="Enter a number" name="guess" required>
+                
+                <div class="justify-content-center w-25 p-3 text-center mx-auto display-6">
+                    <form method="post" action="/guess">
+                        <div class="mb-3 mt-3">
+                            <label for="guess" class="form-label">Guess a number:</label>
+                            <input type="text" class="form-control form-control-lg" placeholder="Enter a number" name="guess" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" value="guess" >Submit</button>
+                    </form>
                 </div>
-                <button type="submit" class="btn btn-primary" value="guess" >Submit</button>
-            </form>
-        </div>
+            {% endif %}
+
+
     </div>
         
 </body>
