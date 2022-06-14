@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+
+
+<body>
+    <div class="mt-4 p-4 bg-dark text-white rounded mx-auto d-flex flex-wrap justify-center" style="width:600px">
+        <h1 class="text-center text-warning mb-4 mx-auto">Dojo Survey</h1>
+        <div class="mx-auto" style="width:460px">
+            <form action="/results" method='post'>
+                <input type="text" class="form-control mb-3" name="name" placeholder="Enter your full name here"
+                    required>
+                <p class="mb-1">Gender: </p>
+                <div class="form-check form-check-inline mb-3">
+                    <input class="form-check-input" type="radio" name="gender" value="Female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" value="Male">
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" value="Non-Binary">
+                    <label class="form-check-label" for="nonbinary">Non-Binary</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" value="Prefer Not to Say">
+                    <label class="form-check-label" for="none">Prefer not to say</label>
+                </div>
+                <select name="location" class="form-select mb-3" aria-label="choose a dojo location" required>
+                    <option selected>Choose a location</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Online">Online</option>
+                    <option value="Burbank">Burbank</option>
+                    <option value="Bellevue">Bellevue</option>
+                </select>
+                <select name="language" class="form-select mb-3" aria-label="choose favorite programming language" required>
+                    <option selected>Favorite location</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="C#">C#</option>
+                </select>
+                <div class="mb-3">
+                    <label for="comments" class="form-label">Comments (optional)</label>
+                    <textarea name="comments" class="form-control" id="comments" rows="3"></textarea>
+                </div>
+                <div class="form-check mb-3">
+                    <input name="currentStudent" class="form-check-input" type="checkbox" value="Yes" id="currentStudent">
+                    <label class="form-check-label" for="currentStudent">Current Student</label>
+                </div>
+                <div class="d-flex justify-center" style="width:460px">
+                    <input type="submit" class="btn btn-primary btn-block mb-4" style="width:460px" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
