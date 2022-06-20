@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Dojo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-4 p-5 bg-primary text-white rounded" style="width:700px">
+        <h1 class="text-center display-1">{{current_dojo.name}}</h1>
+        <p class="text-center display-6">List of ninjas</p>
+        
+        <!-- display table of ninjas from specific dojo -->
+        <table class="table text-white">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ninja in current_dojo.list_ninjas %}
+                <tr>
+                    <td>{{ninja.first_name}}</td>
+                    <td>{{ninja.last_name}}</td>
+                    <td>{{ninja.age}}</td>
+                </tr>
+                {% endfor %}
+            </tbody> 
+        </table>
+        <div class="d-grid">
+            <a href="/" class="btn btn-dark btn-block btn-lg">Go Back</a>
+        </div>
+    </div>
+    
+</body>
+</html>
