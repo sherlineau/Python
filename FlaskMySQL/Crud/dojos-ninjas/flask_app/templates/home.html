@@ -23,6 +23,7 @@
             <div class="col p-3">
                 <h1 class="text-center">Dojos</h1>
                 <div class="list-group text-center ">
+                    <!-- loops through dojo table and creates an a link ending with the dojo id  -->
                     {% for dojo in dojos %}
                         <a href="/dojos/{{dojo.id}}" class="display-6 list-group-item list-group-item-action">{{dojo.name}}</a>
                     {% endfor %}

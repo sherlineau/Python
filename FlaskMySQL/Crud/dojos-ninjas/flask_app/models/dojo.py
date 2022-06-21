@@ -39,10 +39,12 @@ class Dojo:
         
         results = connectToMySQL('dojos_and_ninjas').query_db(query,data)
 
-        # validate if query has ninjas
+        # validate if query returns anything
         if len(results) > 0:
+            # current ninja is set to the results of our query at index 0, which is returned as a list of dictonaries
             current_dojo = cls(results[0])
             list_ninjas = []
+            # now we need to iterate through the dictionary and decode it, each "ninja" will have an instance of it created and appended(added) to the list_ninjas
             for row in results:
                 current_ninja = {
                     'id' : row['ninjas.id'],
@@ -55,5 +57,6 @@ class Dojo:
                 }
                 ninja = Ninja(current_ninja)
                 list_ninjas.append( ninja )
+            #instances of our dojo [current_dojo], attaching a list to that instance and setting it to the list we built above 
             current_dojo.list_ninjas = list_ninjas
             return current_dojo

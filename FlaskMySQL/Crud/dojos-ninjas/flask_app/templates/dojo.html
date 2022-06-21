@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="container mt-4 p-5 bg-primary text-white rounded" style="width:700px">
+        <!-- grabs the dojo instance and the name -->
         <h1 class="text-center display-1">{{current_dojo.name}}</h1>
         <p class="text-center display-6">List of ninjas</p>
         
@@ -22,6 +23,7 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- loop through the instance list and creates a row with data entries for each ninja -->
                 {% for ninja in current_dojo.list_ninjas %}
                 <tr>
                     <td>{{ninja.first_name}}</td>
