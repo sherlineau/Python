@@ -1,5 +1,6 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask_app.models import burger
+from flask import flash
 
 class Restaurant: 
     def __init__(self, data):
